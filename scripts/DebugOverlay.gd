@@ -13,7 +13,7 @@ func _ready():
 func add_stats(stat_name, object, stat_ref, is_method):
 	stats.append([stat_name, object, stat_ref, is_method])
 
-func _process(delta):
+func _process(_delta):
 	var label_text = ""
 
 	var fps = Engine.get_frames_per_second()

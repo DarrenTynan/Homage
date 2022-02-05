@@ -6,7 +6,7 @@ func _ready():
 	var overlay = load("res://scenes/DebugOverlay.tscn").instance()
 
 	# Append text to canvas layer.
-	overlay.add_stats(("Player Speed (x,y)"), $Player, "movement", false)
+	overlay.add_stats(("Player Position (x,y)"), $Player, "get_position", true)
 	overlay.add_stats(("Player Life"), $Player, "player_life", false)
 
 	overlay.add_stats(("Player Velocity"), $Player, "velocity", false)
@@ -15,4 +15,5 @@ func _ready():
 	overlay.add_stats(("Player Move Direction"), $Player, "move_direction", false)
 	
 	overlay.add_stats(("Player Current State"), $Player/StateMachine, "state", false)
+	overlay.add_stats(("Player Is RayCast Grounded"), $Player, "_ray_check_is_grounded", true)
 	add_child(overlay)
