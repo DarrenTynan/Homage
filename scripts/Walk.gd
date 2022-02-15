@@ -14,7 +14,7 @@ func physics_update(delta: float) -> void:
 	player.velocity.y += player.gravity * delta
 	if player.move_direction != 0:
 		player.animated_sprite.scale.x = player.move_direction
-		player.animated_sprite.play("WalkRight")
+		player.animated_sprite.play("Walk2")
 
 	player.velocity = player.move_and_slide(player.velocity, Vector2.UP)
 
