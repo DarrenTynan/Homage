@@ -1,25 +1,6 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=19 format=2]
 
-[ext_resource path="res://assets/Player/idle/idle-1.png" type="Texture" id=1]
-[ext_resource path="res://assets/Player/attack01/attack-1.png" type="Texture" id=2]
-[ext_resource path="res://assets/Player/get-hit/get-hit-1.png" type="Texture" id=3]
-[ext_resource path="res://assets/Player/idle/idle-4.png" type="Texture" id=4]
-[ext_resource path="res://assets/Player/attack01/attack-2.png" type="Texture" id=5]
-[ext_resource path="res://assets/Player/attack01/attack-4.png" type="Texture" id=6]
-[ext_resource path="res://assets/Player/get-hit/get-hit-3.png" type="Texture" id=7]
-[ext_resource path="res://assets/Player/idle/idle-5.png" type="Texture" id=8]
-[ext_resource path="res://assets/Player/walk/walk-R-4.png" type="Texture" id=9]
-[ext_resource path="res://assets/Player/walk/walk-R-1.png" type="Texture" id=10]
-[ext_resource path="res://assets/Player/walk/walk-R-3.png" type="Texture" id=11]
-[ext_resource path="res://assets/Player/walk/walk-R-5.png" type="Texture" id=12]
-[ext_resource path="res://assets/Player/idle/idle-2.png" type="Texture" id=13]
-[ext_resource path="res://assets/Player/walk/walk-R-6.png" type="Texture" id=14]
-[ext_resource path="res://assets/Player/get-hit/get-hit-4.png" type="Texture" id=15]
-[ext_resource path="res://assets/Player/idle/idle-3.png" type="Texture" id=16]
-[ext_resource path="res://assets/Player/get-hit/get-hit-2.png" type="Texture" id=17]
-[ext_resource path="res://assets/Player/walk/walk-R-2.png" type="Texture" id=18]
 [ext_resource path="res://scripts/Player.gd" type="Script" id=19]
-[ext_resource path="res://assets/Player/attack01/attack-3.png" type="Texture" id=20]
 [ext_resource path="res://scripts/StateMachine.gd" type="Script" id=21]
 [ext_resource path="res://scripts/Idle.gd" type="Script" id=22]
 [ext_resource path="res://scripts/Walk.gd" type="Script" id=23]
@@ -28,21 +9,33 @@
 
 [sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 24 )
-region = Rect2( 0, 0, 26, 26 )
+region = Rect2( 130, 0, 26, 26 )
 
 [sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 24 )
-region = Rect2( 26, 0, 26, 26 )
+region = Rect2( 156, 0, 26, 26 )
 
 [sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 24 )
-region = Rect2( 52, 0, 26, 26 )
+region = Rect2( 182, 0, 26, 26 )
 
 [sub_resource type="AtlasTexture" id=10]
 atlas = ExtResource( 24 )
-region = Rect2( 78, 0, 26, 26 )
+region = Rect2( 0, 0, 26, 26 )
 
 [sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 24 )
+region = Rect2( 26, 0, 26, 26 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 24 )
+region = Rect2( 52, 0, 26, 26 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 24 )
+region = Rect2( 78, 0, 26, 26 )
+
+[sub_resource type="AtlasTexture" id=14]
 atlas = ExtResource( 24 )
 region = Rect2( 104, 0, 26, 26 )
 
@@ -54,58 +47,22 @@ region = Rect2( 286, 0, 26, 26 )
 atlas = ExtResource( 24 )
 region = Rect2( 312, 0, 26, 26 )
 
-[sub_resource type="AtlasTexture" id=17]
-atlas = ExtResource( 24 )
-region = Rect2( 338, 0, 26, 26 )
-
-[sub_resource type="AtlasTexture" id=12]
-atlas = ExtResource( 24 )
-region = Rect2( 130, 0, 26, 26 )
-
-[sub_resource type="AtlasTexture" id=13]
-atlas = ExtResource( 24 )
-region = Rect2( 156, 0, 26, 26 )
-
-[sub_resource type="AtlasTexture" id=14]
-atlas = ExtResource( 24 )
-region = Rect2( 182, 0, 26, 26 )
-
-[sub_resource type="SpriteFrames" id=5]
+[sub_resource type="SpriteFrames" id=17]
 animations = [ {
-"frames": [ ExtResource( 3 ), ExtResource( 17 ), ExtResource( 7 ), ExtResource( 15 ) ],
+"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
 "loop": true,
-"name": "GetHit",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 2 ), ExtResource( 5 ), ExtResource( 20 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "Attack01",
-"speed": 12.0
-}, {
-"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
-"loop": true,
-"name": "Idle2",
-"speed": 12.0
-}, {
-"frames": [ SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
-"loop": true,
-"name": "Jump2",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 10 ), ExtResource( 18 ), ExtResource( 11 ), ExtResource( 9 ), ExtResource( 12 ), ExtResource( 14 ) ],
-"loop": true,
-"name": "WalkRight",
+"name": "Walk",
 "speed": 6.0
 }, {
-"frames": [ ExtResource( 1 ), ExtResource( 13 ), ExtResource( 16 ), ExtResource( 4 ), ExtResource( 8 ) ],
+"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
 "loop": true,
 "name": "Idle",
-"speed": 12.0
+"speed": 6.0
 }, {
-"frames": [ SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
+"frames": [ SubResource( 15 ), SubResource( 16 ) ],
 "loop": true,
-"name": "Walk2",
-"speed": 5.0
+"name": "Jump",
+"speed": 6.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=6]
@@ -119,9 +76,9 @@ gravity = 110
 jump_velocity = -90
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 5 )
-animation = "Idle2"
-frame = 1
+frames = SubResource( 17 )
+animation = "Idle"
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -16,7 +16,7 @@ func update(_delta: float) -> void:
 		state_machine.transition_to("Air", { do_jump = true })
 		return
 
-	player.animated_sprite.play("Idle2")
+	player.animated_sprite.play("Idle")
 
 	if Input.is_action_just_pressed("jump"):
 		# As we'll only have one air state for both jump and fall, we use the `msg` dictionary 

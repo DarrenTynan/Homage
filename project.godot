@@ -38,7 +38,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="ProjectAlpha"
+config/name="Homage"
 run/main_scene="res://scenes/Game.tscn"
 config/icon="res://icon.png"
 
@@ -54,6 +54,8 @@ window/stretch/aspect="keep"
 
 layer=false
 collision=false
+res=false
+preloading=false
 
 [importer_defaults]
 

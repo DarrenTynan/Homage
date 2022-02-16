@@ -1,136 +1,9 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/Entity.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scripts/Game.gd" type="Script" id=4]
 [ext_resource path="res://assets/Tilemap/Level-001-Tiles.png" type="Texture" id=5]
 [ext_resource path="res://scenes/EntitySkeleton.tscn" type="PackedScene" id=22]
-
-[sub_resource type="StreamTexture" id=8]
-load_path = "res://.import/castle-tileset.png-96af395afe1e6de7e220fc710cfef504.stex"
-
-[sub_resource type="ConvexPolygonShape2D" id=1]
-points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
-
-[sub_resource type="ConvexPolygonShape2D" id=2]
-points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
-
-[sub_resource type="ConvexPolygonShape2D" id=3]
-points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
-
-[sub_resource type="TileSet" id=4]
-0/name = "castle-tileset.png 0"
-0/texture = SubResource( 8 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 0, 16, 16 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
-0/z_index = 0
-1/name = "castle-tileset.png 1"
-1/texture = SubResource( 8 )
-1/tex_offset = Vector2( 0, 0 )
-1/modulate = Color( 1, 1, 1, 1 )
-1/region = Rect2( 80, 112, 48, 16 )
-1/tile_mode = 1
-1/autotile/bitmask_mode = 1
-1/autotile/bitmask_flags = [ Vector2( 0, 0 ), 48, Vector2( 1, 0 ), 56, Vector2( 2, 0 ), 24 ]
-1/autotile/icon_coordinate = Vector2( 0, 0 )
-1/autotile/tile_size = Vector2( 16, 16 )
-1/autotile/spacing = 0
-1/autotile/occluder_map = [  ]
-1/autotile/navpoly_map = [  ]
-1/autotile/priority_map = [  ]
-1/autotile/z_index_map = [  ]
-1/occluder_offset = Vector2( 0, 0 )
-1/navigation_offset = Vector2( 0, 0 )
-1/shape_offset = Vector2( 0, 0 )
-1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape = SubResource( 1 )
-1/shape_one_way = false
-1/shape_one_way_margin = 1.0
-1/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 1 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 1, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 2 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 2, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 3 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-1/z_index = 0
-2/name = "castle-tileset.png 2"
-2/texture = SubResource( 8 )
-2/tex_offset = Vector2( 0, 0 )
-2/modulate = Color( 1, 1, 1, 1 )
-2/region = Rect2( 0, 80, 32, 32 )
-2/tile_mode = 0
-2/occluder_offset = Vector2( 0, 0 )
-2/navigation_offset = Vector2( 0, 0 )
-2/shape_offset = Vector2( 0, 0 )
-2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape_one_way = false
-2/shape_one_way_margin = 0.0
-2/shapes = [  ]
-2/z_index = 0
-3/name = "castle-tileset.png 3"
-3/texture = SubResource( 8 )
-3/tex_offset = Vector2( 0, 0 )
-3/modulate = Color( 1, 1, 1, 1 )
-3/region = Rect2( 32, 80, 32, 32 )
-3/tile_mode = 0
-3/occluder_offset = Vector2( 0, 0 )
-3/navigation_offset = Vector2( 0, 0 )
-3/shape_offset = Vector2( 0, 0 )
-3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-3/shape_one_way = false
-3/shape_one_way_margin = 0.0
-3/shapes = [  ]
-3/z_index = 0
-4/name = "castle-tileset.png 4"
-4/texture = SubResource( 8 )
-4/tex_offset = Vector2( 0, 0 )
-4/modulate = Color( 1, 1, 1, 1 )
-4/region = Rect2( 64, 80, 32, 32 )
-4/tile_mode = 0
-4/occluder_offset = Vector2( 0, 0 )
-4/navigation_offset = Vector2( 0, 0 )
-4/shape_offset = Vector2( 0, 0 )
-4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape_one_way = false
-4/shape_one_way_margin = 0.0
-4/shapes = [  ]
-4/z_index = 0
-5/name = "castle-tileset.png 5"
-5/texture = SubResource( 8 )
-5/tex_offset = Vector2( 0, 0 )
-5/modulate = Color( 1, 1, 1, 1 )
-5/region = Rect2( 96, 80, 16, 32 )
-5/tile_mode = 0
-5/occluder_offset = Vector2( 0, 0 )
-5/navigation_offset = Vector2( 0, 0 )
-5/shape_offset = Vector2( 0, 0 )
-5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-5/shape_one_way = false
-5/shape_one_way_margin = 0.0
-5/shapes = [  ]
-5/z_index = 0
 
 [sub_resource type="ConvexPolygonShape2D" id=6]
 points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
@@ -283,32 +156,18 @@ points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
 [node name="Game" type="Node2D"]
 script = ExtResource( 4 )
 
-[node name="TileMap" type="TileMap" parent="."]
-visible = false
-position = Vector2( 512, 512 )
-tile_set = SubResource( 4 )
-cell_size = Vector2( 16, 16 )
-cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
-show_collision = true
-format = 1
-tile_data = PoolIntArray( -131087, 1, 0, -131086, 1, 1, -131085, 1, 1, -131084, 1, 1, -131083, 1, 1, -131082, 1, 1, -131081, 1, 1, -131080, 1, 1, -131079, 1, 2, -131076, 1, 0, -131075, 1, 1, -131074, 1, 1, -131073, 1, 1, -196608, 1, 1, -196607, 1, 1, -196606, 1, 1, -196605, 1, 1, -196604, 1, 1, -196603, 1, 1, -196602, 1, 2, -65540, 3, 0, -65538, 4, 0, -131072, 2, 0, -131070, 3, 0, -131068, 4, 0, -131066, 5, 0 )
-
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 159, 229 )
 gravity = 200
 jump_velocity = -135
 
 [node name="EntitySkeleton" parent="." instance=ExtResource( 22 )]
-position = Vector2( 585, 415 )
+position = Vector2( 563, 310 )
 
-[node name="Entity" parent="." instance=ExtResource( 3 )]
-position = Vector2( 535, 411 )
-
-[node name="TileMap2" type="TileMap" parent="."]
+[node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 5 )
 cell_size = Vector2( 16, 16 )
 cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
-show_collision = true
 format = 1
 tile_data = PoolIntArray( 0, 3, 0, 1, 3, 0, 2, 3, 0, 3, 3, 0, 4, 3, 0, 5, 3, 0, 6, 3, 0, 7, 3, 0, 8, 3, 0, 9, 3, 0, 10, 3, 0, 11, 3, 0, 12, 3, 0, 13, 3, 0, 14, 3, 0, 15, 3, 0, 16, 3, 0, 17, 3, 0, 18, 3, 0, 19, 3, 0, 20, 3, 0, 21, 3, 0, 22, 3, 0, 23, 3, 0, 24, 3, 0, 25, 3, 0, 26, 3, 0, 27, 3, 0, 28, 3, 0, 29, 3, 0, 30, 3, 0, 31, 3, 0, 32, 3, 0, 33, 3, 0, 34, 3, 0, 35, 3, 0, 36, 3, 0, 37, 3, 0, 38, 3, 0, 39, 3, 0, 78, 0, 0, 79, 0, 0, 65536, 3, 0, 65537, 4, 0, 65574, 5, 0, 65575, 3, 0, 65615, 0, 0, 131072, 3, 0, 131111, 3, 0, 196608, 3, 0, 196647, 3, 0, 262144, 3, 0, 262183, 3, 0, 327680, 3, 0, 327719, 3, 0, 393216, 3, 0, 393255, 3, 0, 458752, 3, 0, 458791, 3, 0, 524288, 3, 0, 524327, 3, 0, 589824, 3, 0, 589863, 3, 0, 655360, 3, 0, 655399, 3, 0, 720896, 3, 0, 720935, 3, 0, 786432, 3, 0, 786471, 3, 0, 851968, 3, 0, 852007, 3, 0, 917504, 3, 0, 917543, 3, 0, 983040, 3, 0, 983064, 9, 0, 983065, 9, 0, 983066, 9, 0, 983067, 9, 0, 983068, 9, 0, 983069, 9, 0, 983079, 3, 0, 1048576, 3, 0, 1048599, 9, 0, 1048606, 9, 0, 1048615, 3, 0, 1114112, 3, 0, 1114128, 9, 0, 1114129, 9, 0, 1114130, 9, 0, 1114131, 9, 0, 1114132, 9, 0, 1114133, 9, 0, 1114151, 3, 0, 1179648, 3, 0, 1179657, 9, 0, 1179658, 9, 0, 1179659, 9, 0, 1179660, 9, 0, 1179661, 9, 0, 1179687, 3, 0, 1245184, 3, 0, 1245223, 3, 0, 1310720, 3, 0, 1310721, 6, 0, 1310758, 7, 0, 1310759, 3, 0, 1376256, 3, 0, 1376257, 3, 0, 1376258, 3, 0, 1376259, 3, 0, 1376260, 3, 0, 1376261, 3, 0, 1376262, 3, 0, 1376263, 3, 0, 1376264, 3, 0, 1376265, 3, 0, 1376266, 3, 0, 1376267, 3, 0, 1376268, 3, 0, 1376269, 3, 0, 1376270, 3, 0, 1376271, 3, 0, 1376272, 3, 0, 1376273, 3, 0, 1376274, 3, 0, 1376275, 3, 0, 1376276, 3, 0, 1376277, 3, 0, 1376278, 3, 0, 1376279, 3, 0, 1376280, 3, 0, 1376281, 3, 0, 1376282, 3, 0, 1376283, 3, 0, 1376284, 3, 0, 1376285, 3, 0, 1376286, 3, 0, 1376287, 3, 0, 1376288, 3, 0, 1376289, 3, 0, 1376290, 3, 0, 1376291, 3, 0, 1376292, 3, 0, 1376293, 3, 0, 1376294, 3, 0, 1376295, 3, 0, 2818048, 0, 0, 2818127, 0, 0, 2883584, 0, 0, 2883585, 0, 0, 2883662, 0, 0, 2883663, 0, 0, 3145761, 0, 0, 3145762, 0, 0, 3145763, 0, 0, 3145764, 0, 0, 3145765, 0, 0, 3145766, 0, 0, 3145767, 0, 0, 4128789, 0, 0, 4194325, 0, 0, 4194326, 0, 0 )
 

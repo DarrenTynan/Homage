@@ -22,8 +22,9 @@ onready var animated_sprite = $AnimatedSprite
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var entityNode = get_tree().get_root().find_node("Entity", true, false)
-	entityNode.connect("playerSpotted", self, "handlePlayerSpotted")
+	pass
+	# var entityNode = get_tree().get_root().find_node("Entity", true, false)
+	# entityNode.connect("playerSpotted", self, "handlePlayerSpotted")
 
 
 # Signal callback.
