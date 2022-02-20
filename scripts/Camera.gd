@@ -11,7 +11,7 @@ onready var blockers = [$RoomBlocker/CollisionTop, $RoomBlocker/CollisionBottom,
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# Lock exits seperatly (up, down, left, right)
-	set_exits(true, true, false, true)
+	# set_exits(true, true, false, true)
 	# Lock exits on current room.
 	# lock_room(block_exits)
 	pass # Replace with function body.
@@ -33,10 +33,11 @@ func set_exits(block_up:bool, block_down:bool, block_left:bool, block_right:bool
 	blockers[1].set_deferred("disabled", block_down)
 	blockers[2].set_deferred("disabled", block_left)
 	blockers[3].set_deferred("disabled", block_right)
-	print("Setting exits as follows (u,d,l,r) %s,%s,%s,%s" % [block_up, block_down, block_left, block_right])
+	# print("Setting exits as follows (u,d,l,r) %s,%s,%s,%s" % [block_up, block_down, block_left, block_right])
 
 
 func _on_RoomNavigation_body_shape_entered(body_rid:RID, body:Node, body_shape_index:int, local_shape_index:int):
+
 	if local_shape_index < 0 || local_shape_index > 3:
 		return
 

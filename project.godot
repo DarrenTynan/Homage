@@ -45,9 +45,11 @@ config/icon="res://icon.png"
 [display]
 
 window/size/width=640
-window/size/height=360
+window/size/height=352
+window/size/resizable=false
 window/size/test_width=640
-window/size/test_height=360
+window/size/test_height=352
+window/stretch/mode="viewport"
 window/stretch/aspect="keep"
 
 [global]
@@ -56,6 +58,7 @@ layer=false
 collision=false
 res=false
 preloading=false
+"default clear"=false
 
 [importer_defaults]
 
@@ -80,6 +83,7 @@ texture={
 "stream": false,
 "svg/scale": 1.0
 }
+layer=true
 
 [input]
 
@@ -101,9 +105,9 @@ jump={
 
 [layer_names]
 
-2d_render/layer_1="Ground"
-2d_render/layer_2="Player"
-2d_render/layer_3="Enemy"
+2d_physics/layer_1="player"
+2d_physics/layer_2="ground"
+2d_physics/layer_3="enemy"
 
 [physics]
 
@@ -111,4 +115,6 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+2d/snapping/use_gpu_pixel_snap=true
+environment/default_clear_color=Color( 0, 0, 0, 1 )
 environment/default_environment="res://default_env.tres"

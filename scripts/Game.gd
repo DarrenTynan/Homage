@@ -84,4 +84,6 @@ func _on_Camera_room_change(change_direction):
 	if typeof(change_direction) != TYPE_VECTOR2:
 		return
 
+	# print("_on_camera_room_change: change direction ", change_direction)
+	# return
 	_manage_direction(change_direction)
