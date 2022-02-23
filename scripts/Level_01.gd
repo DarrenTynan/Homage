@@ -3,9 +3,9 @@ extends Node2D
 
 const MAP_WIDTH_SCREENS: = 10
 const CELL_SIZE: = 16
-const MAP_SCREEN_SIZE_CELLS: = Vector2(40, 22)
+const MAP_SCREEN_SIZE_CELLS: = Vector2(40, 26)
 const MAP_SCREEN_SIZE_PIXELS: = MAP_SCREEN_SIZE_CELLS * CELL_SIZE
-const START_ROOM: = 1
+const START_ROOM: = 0
 const INVALID_ROOM: = Vector2(-1, -1)
 const INVALID_EXITS = [-1,-1,-1,-1]
 
@@ -18,6 +18,7 @@ const INVALID_EXITS = [-1,-1,-1,-1]
 # navigation if you want.
 const ROOM_DATA = {
 	#		  u,  d,  l,  r
+	"-1" : { "exits": [-1, -1, -1, -1] },
 	"0" : { "exits": [-1, -1, -1, 01] },
 	"1" : { "exits": [-1, -1, 00, 02] },
 	"2" : { "exits": [-1, -1, 01, 03] },

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Level-001-Tiles.png-c76424a8f0423fd5bb64f30be1ba6219.stex"
+path="res://.import/Level_01_Tiles.png-b1b114ce751f5e7b30b310374ea5de53.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tilemap/Level-001-Tiles.png"
-dest_files=[ "res://.import/Level-001-Tiles.png-c76424a8f0423fd5bb64f30be1ba6219.stex" ]
+source_file="res://assets/Tilemap/Level_01_Tiles.png"
+dest_files=[ "res://.import/Level_01_Tiles.png-b1b114ce751f5e7b30b310374ea5de53.stex" ]
 
 [params]
 

@@ -79,11 +79,10 @@ jump_velocity = -90
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 17 )
 animation = "Idle"
-frame = 1
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.25, 1.5 )
 shape = SubResource( 6 )
 
 [node name="StateMachine" type="Node" parent="."]
@@ -100,6 +99,6 @@ script = ExtResource( 23 )
 script = ExtResource( 25 )
 
 [node name="RayCastDown" type="RayCast2D" parent="."]
-position = Vector2( 0.25, 5.25 )
+position = Vector2( 0, 4.5 )
 enabled = true
 cast_to = Vector2( 0, 8 )

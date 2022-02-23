@@ -39,7 +39,7 @@ position = Vector2( 320, 0 )
 shape = SubResource( 1 )
 
 [node name="CollisionBottom" type="CollisionShape2D" parent="RoomBlocker"]
-position = Vector2( 320, 352 )
+position = Vector2( 320, 360 )
 shape = SubResource( 2 )
 
 [node name="CollisionLeft" type="CollisionShape2D" parent="RoomBlocker"]
